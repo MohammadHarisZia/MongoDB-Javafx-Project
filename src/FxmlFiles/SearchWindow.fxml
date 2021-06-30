@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerFiles.mongo">
+   <children>
+      <ImageView fitHeight="522.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="382.0" layoutY="97.0" prefHeight="42.0" prefWidth="202.0" text="Search By">
+         <font>
+            <Font name="Courier New Bold" size="36.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5152671610126058" focusDistance="-0.11214951488459224" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <TextField fx:id="movietxt" layoutX="82.0" layoutY="179.0" promptText="Movie Name" style="-fx-background-color: #daf0ff;" />
+      <TextField fx:id="directortxt" layoutX="379.0" layoutY="179.0" promptText="Director Name" style="-fx-background-color: #daf0ff;" />
+      <TextField fx:id="actortxt" layoutX="379.0" layoutY="262.0" promptText="Actor Name" style="-fx-background-color: #daf0ff;" />
+      <TextField fx:id="genretxt" layoutX="82.0" layoutY="262.0" promptText="Genre" style="-fx-background-color: #daf0ff;" />
+      <Button layoutX="127.0" layoutY="214.0" mnemonicParsing="false" onAction="#searchByTitle" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #FFCA00;" text="Title" />
+      <Button layoutX="418.0" layoutY="301.0" mnemonicParsing="false" onAction="#searchByActor" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #FFCA00;" text="Actor" />
+      <Button layoutX="418.0" layoutY="215.0" mnemonicParsing="false" onAction="#searchByDirector" style="-fx-background-color: #FFCA00;" text="Director" />
+      <Button layoutX="127.0" layoutY="301.0" mnemonicParsing="false" onAction="#searchByGenre" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #FFCA00;" text="Genre" />
+   </children>
+</AnchorPane>
