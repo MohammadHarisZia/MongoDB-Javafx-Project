@@ -18,7 +18,6 @@ public class mongo extends Application {
     public static String director="";
     public static String genre="";
     public static int num = 0;
-
     @FXML
     private TextField movietxt,actortxt,genretxt,directortxt;
     @FXML
@@ -52,7 +51,7 @@ public class mongo extends Application {
         Parent tableViewParent = null;
         try {
             actor = actortxt.getText();
-            tableViewParent = FXMLLoader.load(getClass().getResource("../FxmlFiles/actorSearch.fxml"));
+            tableViewParent = FXMLLoader.load(getClass().getResource("../ActorFXML/actorSearch.fxml"));
             Scene tableViewScene = new Scene(tableViewParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(tableViewScene);
@@ -68,7 +67,7 @@ public class mongo extends Application {
         Parent tableViewParent = null;
         try {
             director = directortxt.getText();
-            tableViewParent = FXMLLoader.load(getClass().getResource("../FxmlFiles/directorSearch.fxml"));
+            tableViewParent = FXMLLoader.load(getClass().getResource("../DirectorFXML/directorSearch.fxml"));
             Scene tableViewScene = new Scene(tableViewParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(tableViewScene);
@@ -85,7 +84,7 @@ public class mongo extends Application {
         try {
             genre=genretxt.getText();
             System.out.println(genre);
-            tableViewParent = FXMLLoader.load(getClass().getResource("../FxmlFiles/genreSearch.fxml"));
+            tableViewParent = FXMLLoader.load(getClass().getResource("../GenreFXML/genreSearch.fxml"));
             Scene tableViewScene = new Scene(tableViewParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(tableViewScene);
